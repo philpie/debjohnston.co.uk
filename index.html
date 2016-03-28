@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Deb Johnston Music</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+	<style> @media(min-width:768px) { p {
+				margin: 0 0 25px;
+			}
+		}	
+
+		body > .content-section:target ~ .intro, body > .content-section { height: 0; opacity: 0;
+																			padding-top: 0px; padding-bottom: 0px;
+																			overflow: hidden; }
+	  
+		/* :last-child works, but for some reason .page:last-child will not */
+		body > .intrao { height: 100%; }
+		body > .content-section:target { opacity: 1; height: auto; 	transition: opacity .25s ease-in;
+																	-moz-transition: opacity .25s ease-in;
+																	-webkit-transition: opacity .25s ease-in; }
+		
+		#music .btn-success { background-color: #49247A; border-color: #130269; }
+	</style>
+	
+	<!-- gallery CSS -->
+    <link href="css/simple-slideshow-styles.css" rel="stylesheet">
+	
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Signika:300' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+	
+	<link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' /> 
+
+	<link rel='stylesheet' href='unitegallery/themes/default/ug-theme-default.css' type='text/css' /> 	
+	
+</head>
+
+<body id="home">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>			
+                <a class="navbar-brand" href="#home">
+                    <i class="fa fa-play-circle"></i>  Deb <span class="light">Johnston</span>
+                </a>
+            </div>
+			
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a href="#biog">Biog</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#gigs">Gigs</a>
+                    </li>
+                    <li>
+                        <a  href="#gallery">Gallery</a>
+                    </li>
+                    <li>
+                        <a  href="#music">Music</a>
+                    </li>
+                    <li>
+                        <a  href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+		<!-- Biog Section -->
+		<section id="biog" class="content-section text-center" stylae="background: url('img/aboutme-bg3.jpg') no-repeat bottom center scroll; background-size:cover;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1">
+					<h2>About Deb Johnston</h2>
+					<p>A Cornish girl through and through, Deb has spent the past 20 years gigging in and around Cornwall and has been fortunate enough to have worked with and alongside some of the finest musicians and producers in the County.</p>
+					<p>Up until the end of 2014 Deb was predominantly known for her drumming, and although she was often seen/heard singing from behind her drum-kit, she liked to remain at the back of the stage.</p>
+					<p>While singing had always been something Deb had enjoyed, it was not something she found easy to do in front of an audience, or in front of anyone for that matter. For many years Deb was encouraged by close friends and family to do more with her voice, but held back by nerves she could not find the confidence to make the transition to the front of the stage…...until recently.</p>
+				</div>
+			</div>
+		</div>
+		</section>
+		
+		
+		<!-- About Section -->
+		
+		<section id="about" class="content-section text-center" stylae="background: url('img/aboutme-bg.jpg') no-repeat top center scroll; background-size:cover; background-origin: border-box;">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10 col-lg-offset-1">
+						<h2>About Deb Johnston Music</h2>
+						<p>Deb is currently gigging in two different line-ups, both with an acoustic vibe but both totally different acts…...</p>
+						<h3><a data-toggle="collapse" onclick="$('#abouttrio').collapse('toggle');" style="cursor: pointer">The Deb Johnston Trio</a></h3>
+						<p class="collapse" id="abouttrio">Backed by a bass player and a cajon/percussionist, Deb covers everything from modern tracks by the likes of Jason M'Raz and Jessie J to Country classics by Dolly Parton & Tammy Wynette. The trio are acoustic but at the same time create the feel of a live band without being overly loud. Deb's charisma and ability to interact with her audience makes the trio a great evening's "entertainment" and something to watch as well as listen to</p>
+						<h3><a data-toggle="collapse" onclick="$('#aboutduo').collapse('toggle');" style="cursor: pointer">A Little Twisted Duo</a></h3>
+						<p class="collapse" id="aboutduo">Back in the late 90's Deb drummed for local band Twisted. The band gigged for several years and earned themselves the reputation of being one of the County's finest cover bands. Twisted was fronted by Traci Watts (now Parsons) - a strong singer with an un-canny resemblance to Alanis Morissette. When Twisted dis-banded in 2003 Deb and Traci lost contact, but through the power of social media they got back in contact in 2014. After meeting up and having an impromptu jam session it was clear that they still had a great musical connection. Deb and Traci decided to put together an acoustic set and put on a couple of local gigs....for old time's sake... but the gigs went so well that they have decided to make it a bit more of a regular thing. Their set contains a number of songs that the girls used to gig back in the 90's by the likes of Alanis Morissette, Skunk Anansie, Sheryl Crowe & The Cranberries as well as some more up-to-date material too. With 2 strong voices and great harmonies the duo has been a big hit with audiences of all ages.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<!-- Gigs Section -->
+		<section id="gigs" class="content-section">
+			<div>
+				<div class="container">
+					<div class="col-lg-10 col-lg-offset-1">
+						<h2 class="text-center">Gigs</h2>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sun<span class="shortendate">day</span> 24 Jan<span class="shortendate">uary</span> 2016 - 5:00pm</span></h3>
+						<p>Deb Johnston Trio at The Four Lords St Blazey</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sat<span class="shortendate">urday</span> 6 Feb<span class="shortendate">ruary</span> 2016 - 9:00pm</span></h3>
+						<p>A Little Twisted at Boscawen Hotel and Granary St Austell</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Fri<span class="shortendate">day</span> 26 Feb<span class="shortendate">ruary</span> 2016 - 9:00pm</span></h3>
+						<p>Deb Johnston Trio at St Austell Golf Club</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sat<span class="shortendate">urday</span> 12 Mar<span class="shortendate">ch</span> 2016 - 8:00pm</span></h3>
+						<p>A Little Twisted at Bystro @ The Bank St Austell</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sun<span class="shortendate">day</span> 13 Mar<span class="shortendate">ch</span> 2016 - 7:00pm</span></h3>
+						<p>A Little Twisted at Gylly Beach Cafe Falmouth</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sat<span class="shortendate">urday</span> 19 Mar<span class="shortendate">ch</span> 2016 - 8:00pm</span></h3>
+						<p>A Little Twisted at Polgooth Inn</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sat<span class="shortendate">urday</span> 26 Mar<span class="shortendate">ch</span> 2016 - 9:00pm</span></h3>
+						<p>A Little Twisted at The Harbour Tavern Mevagissey</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sun<span class="shortendate">day</span> 10 Apr<span class="shortendate">il</span> 2016 - 6:00pm</span></h3>
+						<p>Deb Johnston at The Four Lords St Blazey</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Fri<span class="shortendate">day</span> 15 Apr<span class="shortendate">il</span> 2016 - 9:00pm</span></h3>
+						<p>A Little Twisted at a Private Function</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sat<span class="shortendate">urday</span> 23 Apr<span class="shortendate">il</span> 2016</span></h3>
+						<p>A Little Twisted at a Private Function</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Thur<span class="shortendate">day</span> 21 Apr<span class="shortendate">il</span> 2016</span></h3>
+						<p>Deb Johnston Trio at a Wedding</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sat<span class="shortendate">urday</span> 30 Apr<span class="shortendate">il</span> 2016</span></h3>
+						<p>A Little Twisted at Tyacks Hotel Camborne</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Fri<span class="shortendate">day</span> 13 May 2016 - 9:00pm</span></h3>
+						<p>A Little Twisted at The Rashleigh Charlestown</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sat<span class="shortendate">urday</span> 28 May 2016</span></h3>
+						<p>A Little Twisted at a Wedding</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sun<span class="shortendate">day</span> 3 Jul<span class="shortendate">y</span> 2016 - 3:00pm</span></h3>
+						<p>A Little Twisted at Polgooth Inn</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sun<span class="shortendate">day</span> 24 Jul<span class="shortendate">y</span> 2016 - 7:00pm</span></h3>
+						<p>Deb Johnston Trio at Carlyon Bay Campsite</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sat<span class="shortendate">urday</span> 20 Aug<span class="shortendate">ust</span> 2016 - 9:00pm</span></h3>
+						<p>A Little Twisted at The Harbour Tavern Mevagissey</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sat<span class="shortendate">urday</span> 27 Aug<span class="shortendate">ust</span> 2016 - 7:00pm</span></h3>
+						<p>A Little Twisted at Cornwall Pride Truro</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sat<span class="shortendate">urday</span> 10 Sept<span class="shortendate">ember</span> 2016</span></h3>
+						<p>A Little Twisted at a Wedding</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Sat<span class="shortendate">urday</span> 24 Sept<span class="shortendate">ember</span> 2016</span></h3>
+						<p>A Little Twisted at a Wedding</p>
+						<h3 style="margin-bottom: 0.6em"><span class="label label-default">Fri<span class="shortendate">day</span> 7 Oct<span class="shortendate">ober</span> 2016 - 9:00pm</span></h3>
+						<p>Deb Johnston Trio at The Rashleigh Charlestown</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Gallery Section -->
+		<section id="gallery" class="content-section text-center">
+			<div>
+				<div class="container">
+					<div class="col-lg-10 col-lg-offset-1">
+						<h2>Gallery</h2>
+						
+						<div id="debgallery" style="display:none;">
+							<img alt="" src="img/gallery/2.jpg"
+								data-image="img/gallery/2.jpg"
+								data-description="">
+							<img alt="" src="img/gallery/4.jpg"
+								data-image="img/gallery/4.jpg"
+								data-description="">
+							<img alt="" src="img/gallery/5.jpg"
+								data-image="img/gallery/5.jpg"
+								data-description="">
+							<img alt="" src="img/gallery/6.jpg"
+								data-image="img/gallery/6.jpg"
+								data-description="">
+							<img alt="" src="img/gallery/7.jpg"
+								data-image="img/gallery/7.jpg"
+								data-description="">
+							<img alt="" src="img/gallery/8.jpg"
+								data-image="img/gallery/8.jpg"
+								data-description="">
+							<img alt="" src="img/gallery/9.jpg"
+								data-image="img/gallery/9.jpg"
+								data-description="">
+							<img alt="" src="img/gallery/10.jpg"
+								data-image="img/gallery/10.jpg"
+								data-description="">
+							<img alt="" src="img/gallery/12.jpg"
+								data-image="img/gallery/12.jpg"
+								data-description="">
+						</div>			
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Music Section -->
+		<section id="music" class="content-section">
+			<div>
+				<div class="container">
+					<div class="col-lg-10 col-lg-offset-1">
+						<h2 class="text-center">Music</h2>
+						<p class="text-center">All tracks written and performed by Deb Johnston</p>
+						<div class="row">
+							<div class="col-xs-12 col-sm-4 col-sm-offset-1">
+								<h3 style="margin-bottom: 0.6em;"><span class="label label-default">Girl in the Mirror</span></h3>
+							</div>
+							<div class="col-xs-12 col-sm-5 col-sm-push-2">
+								<button id="mirrorpreview" class="btn btn-default" onclick="saytry.stop();mirror.stop();running.stop();if($(this).text() == 'Preview') {mirror.play();}; this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/vd5t" class="btn btn-default">Purchase 99p</a>&nbsp;&nbsp;
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-4 col-sm-offset-1">
+								<h3 style="margin-bottom: 0.6em"><span class="label label-default">Running Back To You</span></h3>
+							</div>
+							<div class="col-xs-12 col-sm-5 col-sm-push-2">
+								<button id="runningpreview" class="btn btn-default" onclick="saytry.stop();mirror.stop();running.stop();if($(this).text() == 'Preview') {running.play();};this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/xRUO" class="btn btn-default">Purchase 99p</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-4 col-sm-offset-1">
+								<h3 style="margin-bottom: 0.6em"><span class="label label-default">Say We'll Try</span></h3>
+							</div>
+							<div class="col-xs-12 col-sm-5 col-sm-push-2">
+								<button id="saytrypreview" class="btn btn-default" onclick="saytry.stop();mirror.stop();running.stop();if($(this).text() == 'Preview') {saytry.play();};this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/aOpC" class="btn btn-default">Purchase 99p</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section id="contact" class="container content-section text-center">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1">
+					<h2>Contact Deb Johnston</h2>
+					<p><a href="mailto:deb@debjohnston.co.uk?Subject=Website Enquiry">deb@debjohnston.co.uk</a>
+					</p>
+					<ul class="list-inline banner-social-buttons">
+						<li>
+							<a href="https://www.youtube.com/channel/UCfMMqit3X-7TBgxevJSDxtA" class="btn btn-default btn-lg"><i class="fa fa-youtube fa-fw"></i> <span class="network-name">Youtube</span></a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/debjohnstonmusic/" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		<section class="intro">
+			<div class="intro-body" style="height: 100%;">
+				<div class="container" style="height: 100%;">
+					<div class="row" style="heigaht: 100%">
+						<div class="col-xs-12 col-md-7 col-md-puall-4 col-md-offset-1 col-sam-7 col-sm-paull-4 col-sm-offset-1">
+							<h2 class="brand-heading">Deb Johnston</h2>
+							<p class="intro-text">Welcome to the website of Cornwall based singer, songwriter & multi-instrumentalist, Deb Johnston</p>
+						</div>
+						<div class="col-xs-12 col-md-4 col-md-puash-7 col-sam-4 col-sm-paush-7"><img src="img/home.jpg" style=""></div>						
+					</div>
+				</div>
+			</div>
+		</section>		
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Deb Johnston 2016</p><p>Photos by <a href="https://www.facebook.com/PhotosOfMatthewFacey/">Matthew Facey Photography</a></p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+	
+	<!-- gallery javascript -->
+	<script type='text/javascript' src='unitegallery/js/unitegallery.min.js'></script> 
+	<script type='text/javascript' src='unitegallery/themes/tiles/ug-theme-tiles.js'></script> 
+
+	<script>
+		jQuery(document).ready(function(){ 
+			jQuery("#debgallery").unitegallery({
+				tiles_type:"nested",
+				tiles_nested_optimal_tile_width:400,
+				tiles_space_between_cols: 6
+			}); 
+		}); 
+	</script>
+	
+	<script type='text/javascript' src='js/howler.min.js'></script>
+	<script>
+		var mirror = new Howl({
+			src: ["audio/Deb Johnston - Girl in the Mirror - Preview.mp3"],
+			html5: true,
+			volume: 1,
+			onend: function() { $('#mirrorpreview').html("Preview"); },
+			onstop: function() { $('#mirrorpreview').html("Preview"); },
+			onplay: function() { $('#mirrorpreview').html('<i class="fa fa-stop"></i>'); }
+		});
+		var saytry = new Howl({
+			src: ["audio/Deb Johnston - Say We_ll Try - Preview.mp3"],
+			autoplay: false,
+			loop: false,
+			html5: true,
+			onend: function() { $('#saytrypreview').html("Preview"); },
+			onstop: function() { $('#saytrypreview').html("Preview"); },
+			onplay: function() { $('#saytrypreview').html('<i class="fa fa-stop"></i>'); }			
+		});
+		var running = new Howl({
+			src: ["audio/Deb Johnston - Running Back to You - Preview.mp3"],
+			autoplay: false,
+			loop: false,
+			html5: true,
+			onend: function() {	$('#runningpreview').html("Preview"); },
+			onstop: function() { $('#runningpreview').html("Preview"); },
+			onplay: function() { $('#runningpreview').html('<i class="fa fa-stop"></i>'); }			
+		});
+
+		(function(e){e.extend(e.fn,{watch:function(t,n,r){var i=document.createElement("div");var s=function(e,t){e="on"+e;var n=e in t;if(!n){t.setAttribute(e,"return;");n=typeof t[e]=="function"}return n};if(typeof n=="function"){r=n;n={}}if(typeof r!="function")r=function(){};n=e.extend({},{throttle:10},n);var o=function(e){var t=e.data(),n=false,r;for(var i=0;i<t.props.length;i++){r=e.css(t.props[i]);if(t.vals[i]!=r){t.vals[i]=r;n=true;break}}if(n&&t.cb)t.cb.call(e,t)};return this.each(function(){var u=e(this),a=function(){o.call(this,u)},f={props:t.split(","),cb:r,vals:[]};e.each(f.props,function(e){f.vals[e]=u.css(f.props[e])});u.data(f);if(s("DOMAttrModified",i)){u.on("DOMAttrModified",r)}else if(s("propertychange",i)){u.on("propertychange",r)}else{setInterval(a,n.throttle)}})}})})(jQuery)
+
+		jQuery(function($){
+			$("#music").watch('opacity', function(){
+				mirror.stop(); saytry.stop(); running.stop();
+			});
+		});
+	</script>
+</body>
+
+</html>
