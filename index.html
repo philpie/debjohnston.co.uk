@@ -372,7 +372,7 @@
 	<script type="text/javascript" src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 	<script>
 		jQuery(function() {
-			if (!createjs.Sound.initializeDefaultPlugins()) {return;}
+			if (!createjs.Sound.initializeDefaultPlugins()) { alert('init failed'); return;}
 
 			var audioPath = "audio/";
 			var sounds = [
