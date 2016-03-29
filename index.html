@@ -242,7 +242,7 @@
 								<h3 style="margin-bottom: 0.6em;"><span class="label label-default">Girl in the Mirror</span></h3>
 							</div>
 							<div class="col-xs-12 col-sm-5 col-sm-push-2">
-								<button id="mirrorpreview" class="btn btn-default" onclick="if($(this).text() == 'Preview') { playaudio('mirror'); }; this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/vd5t" class="btn btn-default">Purchase 99p</a>&nbsp;&nbsp;
+								<button id="mirrorpreview" class="btn btn-default" onclick="stopaudio();if($(this).text() == 'Preview') { playaudio('mirror'); }; this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/vd5t" class="btn btn-default">Purchase 99p</a>&nbsp;&nbsp;
 							</div>
 						</div>
 						<div class="row">
@@ -250,7 +250,7 @@
 								<h3 style="margin-bottom: 0.6em"><span class="label label-default">Running Back To You</span></h3>
 							</div>
 							<div class="col-xs-12 col-sm-5 col-sm-push-2">
-								<button id="runningpreview" class="btn btn-default" onclick="createjs.Sound.stop();if($(this).text() == 'Preview') { playaudio('running'); }; this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/xRUO" class="btn btn-default">Purchase 99p</a>
+								<button id="runningpreview" class="btn btn-default" onclick="stopaudio();if($(this).text() == 'Preview') { playaudio('running'); }; this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/xRUO" class="btn btn-default">Purchase 99p</a>
 							</div>
 						</div>
 						<div class="row">
@@ -258,7 +258,7 @@
 								<h3 style="margin-bottom: 0.6em"><span class="label label-default">Say We'll Try</span></h3>
 							</div>
 							<div class="col-xs-12 col-sm-5 col-sm-push-2">
-								<button id="saytrypreview" class="btn btn-default" onclick="createjs.Sound.stop();if($(this).text() == 'Preview') { playaudio('saytry'); };this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/aOpC" class="btn btn-default">Purchase 99p</a>
+								<button id="saytrypreview" class="btn btn-default" onclick="stopaudio();if($(this).text() == 'Preview') { playaudio('saytry'); };this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/aOpC" class="btn btn-default">Purchase 99p</a>
 							</div>
 						</div>
 					</div>
@@ -331,68 +331,18 @@
 			}); 
 		}); 
 	</script>
-	
-	<!--<script type='text/javascript' src='js/howler.min.jsa'></script>-->
-	<script>
-		/*var mirror = new Howl({
-			src: ["audio/Deb Johnston - Girl in the Mirror - Preview.mp3", "audio/Deb Johnston - Girl in the Mirror - Preview.ogg"],
-			volume: 1,
-			onend: function() { $('#mirrorpreview').html("Preview"); },
-			onstop: function() { $('#mirrorpreview').html("Preview"); },
-			onplay: function() { $('#mirrorpreview').html('<i class="fa fa-stop"></i>'); }
-		});
-		var saytry = new Howl({
-			src: ["audio/Deb Johnston - Say We_ll Try - Preview.mp3", "audio/Deb Johnston - Say We_ll Try - Preview.ogg"],
-			volume: 1,			
-			onend: function() { $('#saytrypreview').html("Preview"); },
-			onstop: function() { $('#saytrypreview').html("Preview"); },
-			onplay: function() { $('#saytrypreview').html('<i class="fa fa-stop"></i>'); }			
-		});
-		var running = new Howl({
-			src: ["audio/Deb Johnston - Running Back to You - Preview.mp3", "audio/Deb Johnston - Running Back to You - Preview.ogg"],
-			volume: 1,			
-			onend: function() {	$('#runningpreview').html("Preview"); },
-			onstop: function() { $('#runningpreview').html("Preview"); },
-			onplay: function() { $('#runningpreview').html('<i class="fa fa-stop"></i>'); }			
-		});*/
 
-		
-		
-		
+	<script>
 		(function(e){e.extend(e.fn,{watch:function(t,n,r){var i=document.createElement("div");var s=function(e,t){e="on"+e;var n=e in t;if(!n){t.setAttribute(e,"return;");n=typeof t[e]=="function"}return n};if(typeof n=="function"){r=n;n={}}if(typeof r!="function")r=function(){};n=e.extend({},{throttle:10},n);var o=function(e){var t=e.data(),n=false,r;for(var i=0;i<t.props.length;i++){r=e.css(t.props[i]);if(t.vals[i]!=r){t.vals[i]=r;n=true;break}}if(n&&t.cb)t.cb.call(e,t)};return this.each(function(){var u=e(this),a=function(){o.call(this,u)},f={props:t.split(","),cb:r,vals:[]};e.each(f.props,function(e){f.vals[e]=u.css(f.props[e])});u.data(f);if(s("DOMAttrModified",i)){u.on("DOMAttrModified",r)}else if(s("propertychange",i)){u.on("propertychange",r)}else{setInterval(a,n.throttle)}})}})})(jQuery)
 
 		jQuery(function($){
 			$("#music").watch('opacity', function(){
-				mirror.stop(); saytry.stop(); running.stop();
+				stopaudio();
 			});
 		});
 	</script>
-	
-	
-	<script type="text/javascript" src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+
 	<script>
-		jQuery(function() {
-			if (!createjs.Sound.initializeDefaultPlugins()) { alert('init failed'); return;}
-
-			var audioPath = "audio/";
-			var sounds = [
-				{id:"mirror", src:"Deb Johnston - Girl in the Mirror - Preview.ogg"},
-				{id:"running", src:"Deb Johnston - Running Back to You - Preview.ogg"},
-				{id:"saytry", src:"Deb Johnston - Say We_ll Try - Preview.ogg"}
-			];
-
-			createjs.Sound.alternateExtensions = ["mp3"];
-			createjs.Sound.addEventListener("fileload", handleLoad);
-			createjs.Sound.registerSounds(sounds, audioPath);
-		
-			//playaudio('mirror');	
-
-			//$('#mirrorpreview').click( function (){ playaudio('mirror') });			
-		});	
-		
-            function handleLoad(event) {
-                //createjs.Sound.play(event.id);
-            }
 
 		audio = new Audio();
 		if (audio.canPlayType('audio/mpeg;')) {
@@ -405,8 +355,17 @@
 			var saytry = new Audio("audio/Deb Johnston - Say We_ll Try - Preview.ogg");
 		}
 		
+		mirror.onended = function() { $('#mirrorpreview').html("Preview"); };
+		running.onended = function() { $('#runningpreview').html("Preview"); };
+		saytry.onended = function() { $('#saytrypreview').html("Preview"); };
+		mirror.onpause = function() { $('#mirrorpreview').html("Preview"); };
+		running.onpause = function() { $('#runningpreview').html("Preview"); };
+		saytry.onpause = function() { $('#saytrypreview').html("Preview"); };
+		
+		function stopaudio() { mirror.pause(); mirror.currentTime = 0;running.pause(); running.currentTime = 0;saytry.pause(); saytry.currentTime = 0; }
+		
 		function playaudio(id) {
-			mirror.pause(); mirror.currentTime = 0;running.pause(); running.currentTime = 0;saytry.pause(); saytry.currentTime = 0;
+			stopaudio();
 
 			switch (id) {
 				case 'mirror': mirror.volume=1; mirror.play();
@@ -416,13 +375,8 @@
 				case 'saytry': saytry.volume=1; saytry.play();
 					break;
 			}
-			
-			//var myInstance = createjs.Sound.play(id);
-			//myInstance.on("complete", function (event) { alert(event.id); $('#' + event.id + 'preview').html("Preview"); } );
-			
-			//$('#' + id + 'preview').html('<i class="fa fa-stop"></i>');
+			$('#' + id + 'preview').html('<i class="fa fa-stop"></i>');
 		}
-		
 
 	</script>
 </body>
