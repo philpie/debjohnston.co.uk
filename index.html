@@ -371,7 +371,7 @@
 	
 	<script type="text/javascript" src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 	<script>
-		jQuery(function() {
+		function playaudio(id) {
 			if (!createjs.Sound.initializeDefaultPlugins()) { alert('init failed'); return;}
 
 			var audioPath = "audio/";
@@ -382,19 +382,8 @@
 			];
 
 			createjs.Sound.alternateExtensions = ["mp3"];
-			createjs.Sound.addEventListener("fileload", handleLoad);
 			createjs.Sound.registerSounds(sounds, audioPath);
-		
-			//playaudio('mirror');		
-		});	
-		
-            function handleLoad(event) {
-                //createjs.Sound.play(event.id);
-            }
-
-		
-		function playaudio(id) {
-			createjs.WebAudioPlugin.playEmptySound();		
+			
 			var myInstance = createjs.Sound.play(id);
 			myInstance.on("complete", function (event) { alert(event.id); $('#' + event.id + 'preview').html("Preview"); } );
 			
