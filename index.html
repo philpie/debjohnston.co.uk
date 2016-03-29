@@ -242,7 +242,7 @@
 								<h3 style="margin-bottom: 0.6em;"><span class="label label-default">Girl in the Mirror</span></h3>
 							</div>
 							<div class="col-xs-12 col-sm-5 col-sm-push-2">
-								<button id="mirrorpreview" class="btn btn-default" onclick="saytry.stop();mirror.stop();running.stop();if($(this).text() == 'Preview') {mirror.play();}; this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/vd5t" class="btn btn-default">Purchase 99p</a>&nbsp;&nbsp;
+								<button id="mirrorpreview" class="btn btn-default" onclick="createjs.Sound.stop();if($(this).text() == 'Preview') { playaudio('mirror'); }; this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/vd5t" class="btn btn-default">Purchase 99p</a>&nbsp;&nbsp;
 							</div>
 						</div>
 						<div class="row">
@@ -250,7 +250,7 @@
 								<h3 style="margin-bottom: 0.6em"><span class="label label-default">Running Back To You</span></h3>
 							</div>
 							<div class="col-xs-12 col-sm-5 col-sm-push-2">
-								<button id="runningpreview" class="btn btn-default" onclick="saytry.stop();mirror.stop();running.stop();if($(this).text() == 'Preview') {running.play();};this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/xRUO" class="btn btn-default">Purchase 99p</a>
+								<button id="runningpreview" class="btn btn-default" onclick="createjs.Sound.stop();if($(this).text() == 'Preview') { playaudio('running'); }; this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/xRUO" class="btn btn-default">Purchase 99p</a>
 							</div>
 						</div>
 						<div class="row">
@@ -258,7 +258,7 @@
 								<h3 style="margin-bottom: 0.6em"><span class="label label-default">Say We'll Try</span></h3>
 							</div>
 							<div class="col-xs-12 col-sm-5 col-sm-push-2">
-								<button id="saytrypreview" class="btn btn-default" onclick="saytry.stop();mirror.stop();running.stop();if($(this).text() == 'Preview') {saytry.play();};this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/aOpC" class="btn btn-default">Purchase 99p</a>
+								<button id="saytrypreview" class="btn btn-default" onclick="createjs.Sound.stop();if($(this).text() == 'Preview') { playaudio('saytry'); };this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/aOpC" class="btn btn-default">Purchase 99p</a>
 							</div>
 						</div>
 					</div>
@@ -332,9 +332,9 @@
 		}); 
 	</script>
 	
-	<script type='text/javascript' src='js/howler.min.js'></script>
+	<script type='text/javascript' src='js/howler.min.jsa'></script>
 	<script>
-		var mirror = new Howl({
+		/*var mirror = new Howl({
 			src: ["audio/Deb Johnston - Girl in the Mirror - Preview.mp3", "audio/Deb Johnston - Girl in the Mirror - Preview.ogg"],
 			volume: 1,
 			onend: function() { $('#mirrorpreview').html("Preview"); },
@@ -354,8 +354,11 @@
 			onend: function() {	$('#runningpreview').html("Preview"); },
 			onstop: function() { $('#runningpreview').html("Preview"); },
 			onplay: function() { $('#runningpreview').html('<i class="fa fa-stop"></i>'); }			
-		});
+		});*/
 
+		
+		
+		
 		(function(e){e.extend(e.fn,{watch:function(t,n,r){var i=document.createElement("div");var s=function(e,t){e="on"+e;var n=e in t;if(!n){t.setAttribute(e,"return;");n=typeof t[e]=="function"}return n};if(typeof n=="function"){r=n;n={}}if(typeof r!="function")r=function(){};n=e.extend({},{throttle:10},n);var o=function(e){var t=e.data(),n=false,r;for(var i=0;i<t.props.length;i++){r=e.css(t.props[i]);if(t.vals[i]!=r){t.vals[i]=r;n=true;break}}if(n&&t.cb)t.cb.call(e,t)};return this.each(function(){var u=e(this),a=function(){o.call(this,u)},f={props:t.split(","),cb:r,vals:[]};e.each(f.props,function(e){f.vals[e]=u.css(f.props[e])});u.data(f);if(s("DOMAttrModified",i)){u.on("DOMAttrModified",r)}else if(s("propertychange",i)){u.on("propertychange",r)}else{setInterval(a,n.throttle)}})}})})(jQuery)
 
 		jQuery(function($){
@@ -363,6 +366,41 @@
 				mirror.stop(); saytry.stop(); running.stop();
 			});
 		});
+	</script>
+	
+	
+	<script type="text/javascript" src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+	<script>
+		jQuery(function() {
+			if (!createjs.Sound.initializeDefaultPlugins()) {return;}
+
+			var audioPath = "audio/";
+			var sounds = [
+				{id:"mirror", src:"Deb Johnston - Girl in the Mirror - Preview.ogg"},
+				{id:"running", src:"Deb Johnston - Running Back to You - Preview.ogg"},
+				{id:"saytry", src:"Deb Johnston - Say We_ll Try - Preview.ogg"}
+			];
+
+			createjs.Sound.alternateExtensions = ["mp3"];
+			createjs.Sound.addEventListener("fileload", handleLoad);
+			createjs.Sound.registerSounds(sounds, audioPath);
+		
+			//playaudio('mirror');		
+		});	
+		
+            function handleLoad(event) {
+                //createjs.Sound.play(event.id);
+            }
+
+		
+		function playaudio(id) {
+			var myInstance = createjs.Sound.play(id);
+			myInstance.on("complete", function (event) { alert(event.id); $('#' + event.id + 'preview').html("Preview"); } );
+			
+			$('#' + id + 'preview').html('<i class="fa fa-stop"></i>');
+		}
+		
+
 	</script>
 </body>
 
