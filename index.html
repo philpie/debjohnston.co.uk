@@ -361,6 +361,9 @@
 		mirror.onpause = function() { $('#mirrorpreview').html("Preview"); };
 		running.onpause = function() { $('#runningpreview').html("Preview"); };
 		saytry.onpause = function() { $('#saytrypreview').html("Preview"); };
+		mirror.onplay = function() { $('#mirrorpreview').html('<i class="fa fa-stop"></i>'); };
+		running.onplay = function() { $('#runningpreview').html('<i class="fa fa-stop"></i>'); };
+		saytry.onplay = function() { $('#saytrypreview').html('<i class="fa fa-stop"></i>'); };
 		
 		function stopaudio() { mirror.pause(); mirror.currentTime = 0;running.pause(); running.currentTime = 0;saytry.pause(); saytry.currentTime = 0; }
 		
@@ -375,7 +378,6 @@
 				case 'saytry': saytry.volume=1; saytry.play();
 					break;
 			}
-			$('#' + id + 'preview').html('<i class="fa fa-stop"></i>');
 		}
 
 	</script>
