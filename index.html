@@ -336,21 +336,18 @@
 	<script>
 		var mirror = new Howl({
 			src: ["audio/Deb Johnston - Girl in the Mirror - Preview.mp3", "audio/Deb Johnston - Girl in the Mirror - Preview.ogg"],
-			html5: true,			
 			onend: function() { $('#mirrorpreview').html("Preview"); },
 			onstop: function() { $('#mirrorpreview').html("Preview"); },
 			onplay: function() { $('#mirrorpreview').html('<i class="fa fa-stop"></i>'); }
 		});
 		var saytry = new Howl({
 			src: ["audio/Deb Johnston - Say We_ll Try - Preview.mp3", "audio/Deb Johnston - Say We_ll Try - Preview.ogg"],
-			html5: true,
 			onend: function() { $('#saytrypreview').html("Preview"); },
 			onstop: function() { $('#saytrypreview').html("Preview"); },
 			onplay: function() { $('#saytrypreview').html('<i class="fa fa-stop"></i>'); }			
 		});
 		var running = new Howl({
 			src: ["audio/Deb Johnston - Running Back to You - Preview.mp3", "audio/Deb Johnston - Running Back to You - Preview.ogg"],
-			html5: true,
 			onend: function() {	$('#runningpreview').html("Preview"); },
 			onstop: function() { $('#runningpreview').html("Preview"); },
 			onplay: function() { $('#runningpreview').html('<i class="fa fa-stop"></i>'); }			
