@@ -242,7 +242,7 @@
 								<h3 style="margin-bottom: 0.6em;"><span class="label label-default">Girl in the Mirror</span></h3>
 							</div>
 							<div class="col-xs-12 col-sm-5 col-sm-push-2">
-								<button id="mirrorpreview" class="btn btn-default" onclick="if($(this).text() == 'Preview') { playaudio('mirror'); }; this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/vd5t" class="btn btn-default">Purchase 99p</a>&nbsp;&nbsp;
+								<button id="mirrorpreview" class="btn btn-default" oncalick="if($(this).text() == 'Preview') { playaudio('mirror'); }; this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/vd5t" class="btn btn-default">Purchase 99p</a>&nbsp;&nbsp;
 							</div>
 						</div>
 						<div class="row">
@@ -332,7 +332,7 @@
 		}); 
 	</script>
 	
-	<script type='text/javascript' src='js/howler.min.jsa'></script>
+	<!--<script type='text/javascript' src='js/howler.min.jsa'></script>-->
 	<script>
 		/*var mirror = new Howl({
 			src: ["audio/Deb Johnston - Girl in the Mirror - Preview.mp3", "audio/Deb Johnston - Girl in the Mirror - Preview.ogg"],
@@ -371,7 +371,7 @@
 	
 	<script type="text/javascript" src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 	<script>
-		function playaudio(id) {
+		jQuery(function() {
 			if (!createjs.Sound.initializeDefaultPlugins()) { alert('init failed'); return;}
 
 			var audioPath = "audio/";
@@ -382,12 +382,25 @@
 			];
 
 			createjs.Sound.alternateExtensions = ["mp3"];
+			createjs.Sound.addEventListener("fileload", handleLoad);
 			createjs.Sound.registerSounds(sounds, audioPath);
-			
+		
+			//playaudio('mirror');	
+
+			$('#mirrorpreview').click( function (){ playaudio('mirror') });			
+		});	
+		
+            function handleLoad(event) {
+                //createjs.Sound.play(event.id);
+            }
+
+		
+		function playaudio(id) {
+			//alert(id);
 			var myInstance = createjs.Sound.play(id);
 			myInstance.on("complete", function (event) { alert(event.id); $('#' + event.id + 'preview').html("Preview"); } );
 			
-			$('#' + id + 'preview').html('<i class="fa fa-stop"></i>');
+			//$('#' + id + 'preview').html('<i class="fa fa-stop"></i>');
 		}
 		
 
