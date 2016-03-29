@@ -387,7 +387,7 @@
 			var myInstance = createjs.Sound.play(id);
 			myInstance.on("complete", function (event) { alert(event.id); $('#' + event.id + 'preview').html("Preview"); } );
 			
-			//$('#' + id + 'preview').html('<i class="fa fa-stop"></i>');
+			$('#' + id + 'preview').html('<i class="fa fa-stop"></i>');
 		}
 		
 
