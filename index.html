@@ -394,6 +394,7 @@
 
 		
 		function playaudio(id) {
+			createjs.WebAudioPlugin.playEmptySound();		
 			var myInstance = createjs.Sound.play(id);
 			myInstance.on("complete", function (event) { alert(event.id); $('#' + event.id + 'preview').html("Preview"); } );
 			
