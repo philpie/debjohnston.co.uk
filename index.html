@@ -394,12 +394,28 @@
                 //createjs.Sound.play(event.id);
             }
 
+		audio = new Audio();
+		if (audio.canPlayType('audio/mpeg;')) {
+			var mirror = new Audio("audio/Deb Johnston - Girl in the Mirror - Preview.mp3");
+			var running = new Audio("audio/Deb Johnston - Running Back to You - Preview.mp3");
+			var saytry = new Audio("audio/Deb Johnston - Say We_ll Try - Preview.mp3");
+		} else {
+			var mirror = new Audio("audio/Deb Johnston - Girl in the Mirror - Preview.ogg");
+			var running = new Audio("audio/Deb Johnston - Running Back to You - Preview.ogg");
+			var saytry = new Audio("audio/Deb Johnston - Say We_ll Try - Preview.ogg");
+		}
 		
 		function playaudio(id) {
-			//alert(id);
-			alert();
-			var audio = new Audio("audio/Deb Johnston - Girl in the Mirror - Preview.mp3");
-			audio.play();
+			mirror.pause(); mirror.currentTime = 0;running.pause(); running.currentTime = 0;saytry.pause(); saytry.currentTime = 0;
+
+			switch (id) {
+				case 'mirror': mirror.play();
+					break;
+				case 'running': running.play();
+					break;
+				case 'saytry': saytry.play();
+					break;
+			}
 			
 			//var myInstance = createjs.Sound.play(id);
 			//myInstance.on("complete", function (event) { alert(event.id); $('#' + event.id + 'preview').html("Preview"); } );
