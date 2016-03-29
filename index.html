@@ -409,11 +409,11 @@
 			mirror.pause(); mirror.currentTime = 0;running.pause(); running.currentTime = 0;saytry.pause(); saytry.currentTime = 0;
 
 			switch (id) {
-				case 'mirror': mirror.play();
+				case 'mirror': mirror.volume=1; mirror.play();
 					break;
-				case 'running': running.play();
+				case 'running': running.volume=1; running.play();
 					break;
-				case 'saytry': saytry.play();
+				case 'saytry': saytry.volume=1; saytry.play();
 					break;
 			}
 			
