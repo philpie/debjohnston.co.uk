@@ -277,6 +277,14 @@
 							<button id="saytrypreview" class="btn btn-default" onclick="stopaudio();if($(this).text() == 'Preview') { playaudio('saytry'); };this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/aOpC" class="btn btn-default">Purchase 99p</a>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-4 col-sm-offset-1">
+							<h3 style="margin-bottom: 0.6em"><span class="label label-default">Angel</span></h3>
+						</div>
+						<div class="col-xs-12 col-sm-5 col-sm-push-2">
+							<button id="angelpreview" class="btn btn-default" onclick="stopaudio();if($(this).text() == 'Preview') { playaudio('angel'); };this.blur();">Preview</button>&nbsp;&nbsp;<a href="https://payhip.com/b/1BGX" class="btn btn-default">Purchase 99p</a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="row text-center">
@@ -367,23 +375,28 @@
 			var mirror = new Audio("audio/Deb Johnston - Girl in the Mirror - Preview.mp3");
 			var running = new Audio("audio/Deb Johnston - Running Back to You - Preview.mp3");
 			var saytry = new Audio("audio/Deb Johnston - Say We_ll Try - Preview.mp3");
+			var angel = new Audio("audio/Deb Johnston - Angel - Preview.mp3");
 		} else {
 			var mirror = new Audio("audio/Deb Johnston - Girl in the Mirror - Preview.ogg");
 			var running = new Audio("audio/Deb Johnston - Running Back to You - Preview.ogg");
 			var saytry = new Audio("audio/Deb Johnston - Say We_ll Try - Preview.ogg");
+			var angel = new Audio("audio/Deb Johnston - Angel - Preview.ogg");
 		}
 		
 		mirror.onended = function() { $('#mirrorpreview').html("Preview"); };
 		running.onended = function() { $('#runningpreview').html("Preview"); };
 		saytry.onended = function() { $('#saytrypreview').html("Preview"); };
+		angel.onended = function() { $('#angelpreview').html("Preview"); };
 		mirror.onpause = function() { $('#mirrorpreview').html("Preview"); };
 		running.onpause = function() { $('#runningpreview').html("Preview"); };
 		saytry.onpause = function() { $('#saytrypreview').html("Preview"); };
+		angel.onpause = function() { $('#angelpreview').html("Preview"); };
 		mirror.onplay = function() { $('#mirrorpreview').html('<i class="fa fa-stop"></i>'); };
 		running.onplay = function() { $('#runningpreview').html('<i class="fa fa-stop"></i>'); };
 		saytry.onplay = function() { $('#saytrypreview').html('<i class="fa fa-stop"></i>'); };
+		angel.onplay = function() { $('#angelpreview').html('<i class="fa fa-stop"></i>'); };
 		
-		function stopaudio() { mirror.pause(); mirror.currentTime = 0;running.pause(); running.currentTime = 0;saytry.pause(); saytry.currentTime = 0; }
+		function stopaudio() { mirror.pause(); mirror.currentTime = 0;running.pause(); running.currentTime = 0;saytry.pause(); saytry.currentTime = 0;angel.pause(); angel.currentTime = 0; }
 		
 		function playaudio(id) {
 			stopaudio();
@@ -394,6 +407,8 @@
 				case 'running': running.volume=1; running.play();
 					break;
 				case 'saytry': saytry.volume=1; saytry.play();
+					break;
+				case 'angel': angel.volume=1; angel.play();
 					break;
 			}
 		}
