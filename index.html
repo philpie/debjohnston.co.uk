@@ -19,7 +19,32 @@
 	<style> @media(min-width:768px) { p {
 				margin: 0 0 25px;
 			}
-		}	
+		}
+		.navbar-nav > li > a {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-left: 8px;
+				padding-right: 8px;
+				font-size: 13px; 
+			}
+		.navbar-brand { font-size: 16px;
+						padding-right: 6px; }
+						
+		@media(min-width:992px) {
+			.navbar-nav > li > a {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-left: 15px;
+				padding-right: 15px;
+				font-size: 14px; 
+			} 
+			.navbar-brand { font-size: 18px;
+						padding-right: 15px; }	
+		}
+		
+		.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+			max-height: 400px;
+		}
 
 		body > .content-section:target ~ .intro, body > .content-section { height: 0; opacity: 0;
 																			padding-top: 0px; padding-bottom: 0px;
@@ -93,6 +118,9 @@
                     </li>
                     <li>
                         <a  href="#music">Music</a>
+                    </li>
+                    <li>
+                        <a  href="#merchandise">Merchandise</a>
                     </li>
                     <li>
                         <a  href="#contact">Contact</a>
