@@ -306,7 +306,7 @@
 
 						<form name="pride">
 							<h4></h4>
-							<h4>Clothing Style: <select name="style"><option></option><option value="ladiespt">Ladies T-Shirt</option><option value="ladiespv">Ladies Vest</option><option value="menspt">Mens T-Shirt</option></select></h4>
+							<h4>Clothing Style: <select name="style"><option></option><option value="ladiespt">Ladies Pride T-Shirt</option><option value="ladiespv">Ladies Pride Vest</option><option value="menspt">Mens Pride T-Shirt</option></select></h4>
 							<h4>Size: <select name="size"><option></option><option value="small">Small</option><option value="medium">Medium</option><option value="large">Large</option><option value="xlarge">XLarge</option></select></h4>
 							<h4>Delivery: <select name="del"><option></option><option value="del">Delivered</option><option value="col">Collect at a gig</option></select></h4>
 							<a class="btn btn-default btn-lg" onclick="purchasemerc('pride'); return false;">Purchase</a>
@@ -365,8 +365,8 @@
 								links["ladiespvlargecol"] = "https://payhip.com/b/DFjl";
 								links["ladiespvxlargecol"] = "https://payhip.com/b/paB6";
 								
-								if (typeof links[$("#merchandise form[name='" + formname + "'] select[name='style']").val()+$("#merchandise form select[name='size']").val()+$("#merchandise form select[name='del']").val()] !== 'undefined') {
-									window.location = links[$("#merchandise form select[name='style']").val()+$("#merchandise form select[name='size']").val()+$("#merchandise form select[name='del']").val()];
+								if (typeof links[$("#merchandise form[name='" + formname + "'] select[name='style']").val()+$("#merchandise form[name='" + formname + "'] select[name='size']").val()+$("#merchandise form[name='" + formname + "'] select[name='del']").val()] !== 'undefined') {
+									window.location = links[$("#merchandise form[name='" + formname + "'] select[name='style']").val()+$("#merchandise form[name='" + formname + "'] select[name='size']").val()+$("#merchandise form[name='" + formname + "'] select[name='del']").val()];
 								}
 								
 							}
