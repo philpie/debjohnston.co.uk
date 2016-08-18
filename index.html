@@ -306,7 +306,7 @@
 
 						<form name="pride">
 							<h4></h4>
-							<h4>Clothing Style: <select name="style"><option></option><option value="ladiest">Ladies T-Shirt</option><option value="ladiesv">Ladies Vest</option><option value="menst">Mens T-Shirt</option></select></h4>
+							<h4>Clothing Style: <select name="style"><option></option><option value="ladiespt">Ladies T-Shirt</option><option value="ladiespv">Ladies Vest</option><option value="menspt">Mens T-Shirt</option></select></h4>
 							<h4>Size: <select name="size"><option></option><option value="small">Small</option><option value="medium">Medium</option><option value="large">Large</option><option value="xlarge">XLarge</option></select></h4>
 							<h4>Delivery: <select name="del"><option></option><option value="del">Delivered</option><option value="col">Collect at a gig</option></select></h4>
 							<a class="btn btn-default btn-lg" onclick="purchasemerc('pride'); return false;">Purchase</a>
@@ -340,6 +340,31 @@
 								links["ladiesvlargecol"] = "https://payhip.com/b/mNeB";
 								links["ladiesvxlargecol"] = "https://payhip.com/b/FpZf";
 
+								links["mensptsmalldel"] = "https://payhip.com/b/ribc";
+								links["mensptmediumdel"] = "https://payhip.com/b/QjaW";
+								links["mensptlargedel"] = "https://payhip.com/b/ut1L";
+								links["mensptxlargedel"] = "https://payhip.com/b/zI9n";
+								links["mensptsmallcol"] = "https://payhip.com/b/hlNk";
+								links["mensptmediumcol"] = "https://payhip.com/b/4liC";
+								links["mensptlargecol"] = "https://payhip.com/b/3SYk";
+								links["mensptxlargecol"] = "https://payhip.com/b/9qZF";
+								links["ladiesptsmalldel"] = "https://payhip.com/b/270i";
+								links["ladiesptmediumdel"] = "https://payhip.com/b/jXA3";
+								links["ladiesptlargedel"] = "https://payhip.com/b/gDN2";
+								links["ladiesptxlargedel"] = "https://payhip.com/b/mhQX";
+								links["ladiesptsmallcol"] = "https://payhip.com/b/mk7n";
+								links["ladiesptmediumcol"] = "https://payhip.com/b/KIX4";
+								links["ladiesptlargecol"] = "https://payhip.com/b/ZD2e";
+								links["ladiesptxlargecol"] = "https://payhip.com/b/IUBd";
+								links["ladiespvsmalldel"] = "https://payhip.com/b/Ey3e";
+								links["ladiespvmediumdel"] = "https://payhip.com/b/UDzX";
+								links["ladiespvlargedel"] = "https://payhip.com/b/16xC";
+								links["ladiespvxlargedel"] = "https://payhip.com/b/QfHS";
+								links["ladiespvsmallcol"] = "https://payhip.com/b/JHx7";
+								links["ladiespvmediumcol"] = "https://payhip.com/b/qAQO";
+								links["ladiespvlargecol"] = "https://payhip.com/b/DFjl";
+								links["ladiespvxlargecol"] = "https://payhip.com/b/paB6";
+								
 								if (typeof links[$("#merchandise form[name='" + formname + "'] select[name='style']").val()+$("#merchandise form select[name='size']").val()+$("#merchandise form select[name='del']").val()] !== 'undefined') {
 									window.location = links[$("#merchandise form select[name='style']").val()+$("#merchandise form select[name='size']").val()+$("#merchandise form select[name='del']").val()];
 								}
